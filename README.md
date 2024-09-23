@@ -21,6 +21,8 @@ flow-log-processor
 │       ├── flow_logs.txt                   # Sample Flow log input txt file
 │       ├── lookup_table.csv                # Sample Lookup table input csv file
 │       └── output.txt                      # Sample Output txt file
+│       ├── flow_logs_large.txt             # Large Flow log input txt file
+│       └── output_large.txt                # Output txt file for large input
 ```
 ## Steps to run
 First, install the Java jdk.
