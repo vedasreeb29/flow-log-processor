@@ -10,13 +10,26 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Reads the Lookup table from file
+ */
 public class LookupTableReader {
     private final String lookupTableFile;
 
+    /**
+     * Constructs a LookupTableReader with the specified lookup table file path.
+     * @param lookupTableFile the path to the lookup table file
+     */
     public LookupTableReader(String lookupTableFile) {
         this.lookupTableFile = lookupTableFile;
     }
 
+    /**
+     * Generates a lookup table by reading from the specified lookup table file.
+     * Each entry in the table maps a LookupKeyObject (consisting of destination port and protocol) to its corresponding tag.
+     * @return a map of LookupKeyObjects and their corresponding tags
+     * @throws FlowLogException if there is an error while reading the lookup file or if the file is not found
+     */
     public Map<LookupKeyObject, String> generateLookupTable() throws FlowLogException{
         try(BufferedReader reader = new BufferedReader(new FileReader(this.lookupTableFile))) {
             Map<LookupKeyObject, String> lookupTable = new HashMap<>();

@@ -1,5 +1,8 @@
 package com.flowlogprocessor.models;
 
+/**
+ * The FlowLogRecord class represents a flow log record in default format, i.e., version 2
+ */
 public class FlowLogRecord {
     int version;
     String accountId;

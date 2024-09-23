@@ -2,6 +2,10 @@ package com.flowlogprocessor.models;
 
 import java.util.Objects;
 
+/**
+ * The LookupKeyObject class represents a model for key used for mapping flow logs to tags
+ * This LookupKeyObject is customisable to other keys in case we want to include more keys other than destinationPort and destinationPort
+ */
 public class LookupKeyObject {
     int destinationPort;
     String protocol;

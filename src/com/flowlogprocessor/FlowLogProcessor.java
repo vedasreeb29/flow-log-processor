@@ -10,6 +10,9 @@ import com.flowlogprocessor.services.LookupTableReader;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The main class which calls other services to load input flow logs, lookup table and writes the counts of tag matches and port/protocol combinations to the output file
+ */
 public class FlowLogProcessor {
 
     public static void main(String[] args) {
