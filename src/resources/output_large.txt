@@ -1,0 +1,23 @@
+Tag Counts:
+Tag,Count
+SV_P3,8192
+sv_P2,8192
+sv_P1,16384
+email,24576
+Untagged,57344
+Port/Protocol Combination Counts:
+Port,Protocol,Count
+31,udp,8192
+993,tcp,8192
+49157,tcp,8192
+49155,tcp,8192
+443,tcp,8192
+49156,tcp,8192
+25,tcp,8192
+23,tcp,8192
+49158,icmp,8192
+143,tcp,8192
+80,tcp,8192
+110,tcp,8192
+49153,tcp,8192
+49154,tcp,8192

@@ -47,3 +47,10 @@ The output file path parameter is optional and if not provided, the output is st
 - Our program has worst case space complexity of **O(N)**, where **N** is the number of flow logs
 
 It is given that the flow log file size can be up to 10 MB. Considering we have 100 characters per flow record on an average and each character takes approximately 1byte, we could have a maximum of 10^5 records.
+
+## Testing
+Tested the code with an input file of ~12MB(resources/flow_logs_large.txt) and the program took less than 0.5seconds(resources/output_large.txt).
+Run the FlowProcessor using the below java command to test this:
+```
+java -cp out com.flowlogprocessor.FlowLogProcessor src/resources/flow_logs_large.txt src/resources/lookup_table.csv src/resources/output_large.txt
+```

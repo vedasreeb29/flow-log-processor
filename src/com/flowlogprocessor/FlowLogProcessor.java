@@ -16,6 +16,7 @@ import java.util.Map;
 public class FlowLogProcessor {
 
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         if(args.length < 2) {
             System.out.println("Usage: java -cp src FlowLogProcessor <input_file_path> <lookup_table_path> <optional_output_file_path>");
             return;
@@ -38,6 +39,10 @@ public class FlowLogProcessor {
 
             FlowLogMapper flowLogMapper = new FlowLogMapper();
             flowLogMapper.mapFlowLogs(flowRecords, lookupTable, outputFilePath);
+
+            long endTime = System.currentTimeMillis();
+            long duration = endTime - startTime;
+            System.out.println("Output generated and written to the output file at " + outputFilePath + " in " + duration + "milliseconds.");
         } catch(FlowLogException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
